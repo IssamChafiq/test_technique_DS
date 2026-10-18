@@ -2,12 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test-technique</title>
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="game">
+      <h1>Connect 4</h1>
+
+      <div class="players">
+        <div class="player" id="player-1">
+          <span class="arrow">➔</span>
+          <span class="symbol symbol-o">O</span>
+          <span>PLAYER 1</span>
+        </div>
+        <div class="player" id="player-2">
+          <span class="arrow">➔</span>
+          <span class="symbol symbol-x">X</span>
+          
+          <span>PLAYER 2</span>
+        </div>
+      </div>
+
+      <div class="status">
+        <p id="status-text"></p>
+        <button id="restart-btn" class="restart">Restart</button>
+      </div>
+
+      <div id="board" class="board"></div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,16 +1,35 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Connect 4 - Test Technique DotScreen
 
-Currently, two official plugins are available:
+Jeu de Connect 4 développé en **HTML5, CSS et JavaScript**, sans aucun framework ni bibliothèque externe.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Fonctionnalités
 
-## React Compiler
+- **Grille de jeu** : Format standard de 7 colonnes par 6 lignes.
+- **2 joueurs au tour par tour** :
+  - **Player 1** : Pions rouges avec symbole **X**.
+  - **Player 2** : Pions bleus avec symbole **O**.
+- **Indicateur de tour** : Une flèche verte indique en temps réel le joueur actif.
+- **Gravité automatique** : Cliquer sur une colonne place le pion sur la case vide la plus basse.
+- **Détection des conditions de fin** :
+  - Alignement de 4 pions (horizontal, vertical, diagonale descendante `\`, diagonale montante `/`).
+  - Détection automatique du match nul (grille remplie sans vainqueur).
+  - Affichage du message de victoire ou de match nul.
+- **Bouton « Rejouer »** : Réinitialise le plateau et relance une nouvelle partie.
+- **Responsive design** : Adapté aux écrans d'ordinateur et mobiles/smartphones.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Lancement
 
-## Expanding the Oxlint configuration
+Aucune installation ni commande de build requise :
+- Ouvrez simplement `index.html` dans votre navigateur.
+- Ou lancez un serveur local léger si souhaité :
+  ```bash
+  python3 -m http.server 8000
+  ```
+  puis accédez à `http://localhost:8000`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Structure du projet
+
+- `index.html` : Structure sémantique du jeu.
+- `style.css` : Styles responsive et mise en page du plateau.
+- `script.js` : Logique du jeu (grille, gravité, conditions de victoire, tour par tour).
